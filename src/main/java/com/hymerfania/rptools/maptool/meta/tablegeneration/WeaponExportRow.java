@@ -5,7 +5,8 @@ import java.util.UUID;
 import nu.xom.Element;
 
 public class WeaponExportRow {
-    public static long MSB = 8478169612886935310L;
+    /*Magic number for UUID. If changed, UUIDs for every weapon will change. */
+    public static long MSB = 8478169612886935310L;//
     public static WeaponExportRow makeWeaponExportRow(
             final String name, final String type, final int handCount,
             final String toHitStat, final String damage, final int parryId,
@@ -141,21 +142,21 @@ public class WeaponExportRow {
 
     @Override
     public String toString() {
-        return "WeaponExportRow{" +
-                "name=\"" + _name + "\"," +
-                "type=\"" + _type + "\"," +
-                "handCount=\"" + _handCount + "\"," +
-                "toHitStat=\"" + _toHitStat + "\"," +
-                "damage=\"" + _damage + "\"," +
-                "parryId=\"" + _parryId + "\"," +
-                "minStr=\"" + _minStr + "\"," +
-                "_minStrStam=\"" + _minStrStam + "\"," +
-                "crush=\"" + _crush + "\"," +
-                "swing=\"" + _swing + "\"," +
-                "pierce=\"" + _pierce + "\"," +
-                "offhand=\"" + _offhand + "\"," +
-                "bio=\"" + _bio + "\"," +
-                "guid=\"" + _guid + "\"" +
+        return "{" +
+                "\"Name\":\"" + _name + "\"," +
+                "\"Type\":\"" + _type + "\"," +
+                "\"TwoHands\":\"" + _handCount + "\"," +
+                "\"ToHitStat\":\"" + _toHitStat + "\"," +
+                "\"Damage\":\"" + _damage + "\"," +
+                "\"Parry\":\"" + _parryId + "\"," +
+                "\"MinStr\":\"" + _minStr + "\"," +
+                "\"MinStrStam\":\"" + _minStrStam + "\"," +
+                "\"Crush\":\"" + _crush + "\"," +
+                "\"Swing\":\"" + _swing + "\"," +
+                "\"Pierce\":\"" + _pierce + "\"," +
+                "\"Offhand\":\"" + _offhand + "\"," +
+                "\"Bio\":\"" + _bio + "\"," +
+                "\"UUID\":\"" + _guid + "\"" +
                 '}';
     }
 }

@@ -16,7 +16,7 @@ public class App {
     /* Start Serial number s with One (1), not Zero */
     protected static int _serial = 1;
 
-    public static final String CONTENT_XML_FILENAME = "r:/content.xml";
+    public static final String CONTENT_XML_FILENAME = "tables/Weapons/content.xml";
 
     public static void main(String[] args) throws InterruptedException, IOException {
         Path tableXMLTextFile = Paths.get(CONTENT_XML_FILENAME);

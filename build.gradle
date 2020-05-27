@@ -35,3 +35,12 @@ configurations.all {
         force 'xml-apis:xml-apis:1.4.01'
     }
 }
+
+task makeTableFile(type:Exec) {
+    dependsOn "run"
+    print "$projectDir/tables"
+    workingDir "$projectDir/tables"
+// L:\sdk\jdk_1_10x64\bin\jar.exe
+    //on windows:
+    commandLine 'jar', 'cf', "Weapons.mttable", "-C", "Weapons", "."
+}
